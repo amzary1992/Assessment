@@ -65,6 +65,8 @@ class GorestController extends Controller
     				'status' => 'active'
     			]
     		]);
+  
+
 
       // echo $response->getBody()->getContents();die;
 
@@ -79,6 +81,8 @@ class GorestController extends Controller
      */
     public function show($id)
     {   
+
+    	
     	$client = new Client(['base_uri' => 'https://gorest.co.in/public-api/']);
     	$response = $client->request('GET', 'users/'.$id.'');
     	$body = $response->getBody()->getContents();
